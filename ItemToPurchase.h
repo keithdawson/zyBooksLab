@@ -10,14 +10,20 @@
 using namespace std;
 class ItemToPurchase {
 	public:
-		void SetName(string name); //Name
+		void SetName(string); //Name
 		string GetName();
-		void SetPrice(int price);
+		void SetPrice(int);
 		int GetPrice();
-		void SetQuantity(int quant);
+		void SetQuantity(int);
 		int GetQuantity();
 		ItemToPurchase();
+		ItemToPurchase(int, int , string, string);
+		void SetDescription(string desc);
+		string GetDescription();
 	private:
+		void PrintItemCost();
+		void PrintItemDescription();
+		string itemDescription;
 		string itemName;
 		int itemPrice;
 		int itemQuantity;

@@ -37,4 +37,27 @@ ItemToPurchase::ItemToPurchase(){
 	itemPrice = 0;
 	itemQuantity = 0;
 	itemName = "none";
+	itemDescription = "none";
+
+}
+
+ItemToPurchase::ItemToPurchase(int price, int quantity, string name, string desc){
+	itemPrice = price;
+	itemQuantity = quantity;
+	itemName = name;
+	itemDescription = desc;
+
+}
+void ItemToPurchase::SetDescription(string descript){
+	itemDescription = descript;
+}
+string ItemToPurchase::GetDescription(){
+	return itemDescription;
+}
+void ItemToPurchase::PrintItemCost(){
+	cout << GetName() << " " << GetQuantity() << " @ $" << GetPrice() << " = $" << GetPrice()*GetQuantity() << endl;
+
+}
+void ItemToPurchase::PrintItemDescription(){
+	cout << GetName() << ": " << itemDescription << endl;
 }
