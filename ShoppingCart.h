@@ -29,4 +29,5 @@ private:
 	string currentDate;
 	ItemToPurchase cartItems[100];
 	int num;
+	int numOfItems;
 };

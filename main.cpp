@@ -55,13 +55,17 @@ int main() {
 			PrintMenu();
 		}
 		else if (c == 'd'){
+			cin.ignore();
 			cout << "REMOVE ITEM FROM CART" << endl << "Enter name of item to remove:" << endl;
 			string tempString;
 			getline(cin, tempString);
 			cart.RemoveItem(tempString);
+			cout << endl;
 			PrintMenu();
+
 		}
 		else if (c == 'c'){
+			cin.ignore();
 			cout << "CHANGE ITEM QUANTITY" << endl << "Enter the item name:" << endl;
 			string tempString;
 			int tempInt;
