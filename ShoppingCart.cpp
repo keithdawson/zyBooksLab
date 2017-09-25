@@ -3,7 +3,6 @@
 //
 #include <string>
 #include <iostream>
-#include "ItemToPurchase.h"
 #include "ShoppingCart.h"
 
 using namespace std;
@@ -26,6 +25,7 @@ string ShoppingCart::GetDate() {
 }
 void ShoppingCart::AddItem(ItemToPurchase item) {
     cartItems[num] = item;
+    numOfItems +=
     num++;
 }
 void ShoppingCart::RemoveItem(string itemName) {
@@ -64,7 +64,7 @@ int ShoppingCart::GetCostOfCart() {
     return cost;
 }
 void ShoppingCart::PrintTotal() {
-    cout << customerName << "'s Shopping Cart - " << currentDate << end << "Number of Items: " << GetNumItemsInCart() << endl << endl;
+    cout << customerName << "'s Shopping Cart - " << currentDate << endl << "Number of Items: " << GetNumItemsInCart() << endl << endl;
     for (int i = 0; i < num ; i++){
         cout << cartItems[i].GetName() << " " << cartItems[i].GetQuantity() << " @ $" << cartItems[i].GetPrice() << " = $" << cartItems[i].GetPrice()*cartItems[i].GetQuantity() << endl;
     }
@@ -72,7 +72,7 @@ void ShoppingCart::PrintTotal() {
 }
 
 void ShoppingCart::PrintDescriptions() {
-    cout << customerName << "'s Shopping Cart - " << currentDate << end << endl << "Item Descriptions" << endl;
+    cout << customerName << "'s Shopping Cart - " << currentDate << endl << endl << "Item Descriptions" << endl;
     for (int i = 0; i < num ; i++){
         cout << cartItems[i].GetName() << ": " << cartItems[i].GetDescription() << endl;
     }

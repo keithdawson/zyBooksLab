@@ -12,12 +12,12 @@ class ItemToPurchase {
 	public:
 		void SetName(string); //Name
 		string GetName();
-		void SetPrice(int);
-		int GetPrice();
+		void SetPrice(int);000000
+00		int GetPrice();
 		void SetQuantity(int);
 		int GetQuantity();
 		ItemToPurchase();
-		ItemToPurchase(int, int , string, string);
+		ItemToPurchase(string, string, int, int);
 		void SetDescription(string desc);
 		string GetDescription();
 	private:
